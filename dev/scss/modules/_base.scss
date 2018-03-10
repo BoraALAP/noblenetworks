@@ -3,7 +3,6 @@
     -webkit-font-smoothing: antialiased;
 }
 h1,h2,h3,h4,h5,h6{
-    margin-bottom: 30px ;    
 }
 
 h1{
@@ -112,12 +111,8 @@ img{
     box-shadow: 4px 4px 100px rgba($black, 0.3); 
 }
 
-section{
-    padding-left:20vw;
-    padding-top:100px;
-    // width: calc(100vw - 150px);
-    padding-right: 20vw;
-    
+.section{
+    padding:100px 20vw;
 }
 
 
