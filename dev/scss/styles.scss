@@ -89,7 +89,7 @@ header {
     grid-template-areas:"logo . menuicon" ". content ." ". contact .";
     justify-items: stretch;
     align-items: center;
-    width: 92vw;
+    width: 88vw;
     height: 60px;
     padding: 10px 8px;
     margin: 2vh 4vw;
@@ -174,7 +174,7 @@ header {
     #headerimg{
         width: 100vw;
         height:30vh;
-        background-image: url('/assets/img/board1.jpg');
+        background-image: url('../../assets/img/board1.jpg');
         margin-bottom:60px;
         background-size: cover;
         box-shadow: 4px 4px 100px rgba($black, 0.3);
