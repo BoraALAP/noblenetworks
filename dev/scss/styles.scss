@@ -80,6 +80,8 @@ body{
 /*---------------------------------------------- 
 2. NAVIGATION
 ------------------------------------------------*/
+
+
 header {
     display: grid;
     grid-template-columns: 60px auto 60px;
@@ -97,12 +99,14 @@ header {
     transition: 1.2s ease all; 
     
     #logo{
-        height:60px;
+        max-height:60px;
         display: grid;
         grid-area: logo;
         justify-self: start;
         img{
             box-shadow: none;
+            max-width: 200px;
+            width: 50vw;
         }
     }
     #menuicon{
@@ -128,12 +132,16 @@ header {
         justify-items: center;
         display: grid;
         grid-area: contact;
-        grid-auto-flow: column;
+        grid-auto-flow: row;
+        text-align:center;
         align-content: space-evenly;
         align-self: end;
         opacity: 0;
         transition: 0.7s ease all;
         transition-delay: 0.3s;
+        @include MQ($M){
+            grid-auto-flow: column;
+        }
     }
     
     &.active{        
@@ -153,29 +161,27 @@ header {
     }
 }
 
+
+
 #header{
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding-top:220px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+    padding-top:0px;
+    padding-left:0;
     padding-bottom:100px;
+    grid-auto-flow: row;
     #headerimg{
-        grid-column-start: 1;
-        grid-column-end: 2; 
-        width: 45vw;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
+        width: 100vw;
+        height:30vh;
         background-image: url('/assets/img/board1.jpg');
+        margin-bottom:60px;
         background-size: cover;
         box-shadow: 4px 4px 100px rgba($black, 0.3);
     }
     #headertext{
-        grid-column-start: 2;
-        grid-column-end: 3; 
-        width: 40vw;
-        padding: 2vh 5vw;
+        width: 60vw;
+        padding: 2vh 5vw 2vh 20vw;
         h1{
             text-transform: uppercase;
             color: $brand1;
@@ -198,20 +204,12 @@ header {
 
 #ourmission{
     background-color:rgba($gray3, 0.1);
-    padding: 200px 4vw 250px 150px;
+    padding: 100px 20vw 250px;
     h2{
-        text-align: center;
-        padding:30px;
+        text-align: left;
+        
     }
-    h3{
-        width:30%;
-    }
-    p{
-        width:70%;
-    }
-    .row{
-        margin-bottom:40px;
-    }
+
 }
 
 #services{
@@ -235,7 +233,9 @@ header {
     img{
         position: relative;
         grid-column-start: 2;
+        grid-column-end: 3;
         grid-row-start: 1;
+        grid-column-end: 2;
         top:-250px;
         right: 4vw;
         width: 50vw;
@@ -302,3 +302,235 @@ header {
         }
     }
 }
+
+
+
+
+
+// header {
+//     display: grid;
+//     grid-template-columns: 60px auto 60px;
+//     grid-template-rows: 60px auto 30%;
+//     grid-template-areas:"logo . menuicon" ". content ." ". contact .";
+//     justify-items: stretch;
+//     align-items: center;
+//     width: 92vw;
+//     height: 60px;
+//     padding: 10px 8px;
+//     margin: 2vh 4vw;
+//     position: fixed;
+//     background: $white;
+//     z-index: 1000;
+//     transition: 1.2s ease all; 
+    
+//     #logo{
+//         height:60px;
+//         display: grid;
+//         grid-area: logo;
+//         justify-self: start;
+//         img{
+//             box-shadow: none;
+//         }
+//     }
+//     #menuicon{
+//         display: grid;
+//         grid-area: menuicon;
+//         justify-self: center;
+//     }
+//     nav{
+//         display: grid;
+//         grid-area: content;
+//         opacity: 0;
+//         transition: 0.5s ease all;
+//         transition-delay: 0.3s;
+//         z-index:-1000;
+//         ul{
+//             li{
+//                 padding:10px 0;
+//                 text-align: center;
+//             }
+//         }
+//     } 
+//     #contact{
+//         justify-items: center;
+//         display: grid;
+//         grid-area: contact;
+//         grid-auto-flow: column;
+//         align-content: space-evenly;
+//         align-self: end;
+//         opacity: 0;
+//         transition: 0.7s ease all;
+//         transition-delay: 0.3s;
+//     }
+    
+//     &.active{        
+//         height: calc(96vh - 2vh);        
+//         nav{            
+//             opacity: 1;
+//             z-index:1000;
+//             ul{
+//                 opacity: 1;
+//             }
+//         }
+//         #contact{
+//             border-top: 1px solid $gray3;
+//             box-sizing: border-box;
+//             opacity: 1;
+//         }
+//     }
+// }
+
+
+
+// #header{
+//     display:grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr;
+//     padding-top:220px;
+//     padding-bottom:100px;
+    
+//     #headerimg{
+//         grid-column-start: 1;
+//         grid-column-end: 2; 
+//         width: 45vw;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         height: 100vh;
+//         background-image: url('/assets/img/board1.jpg');
+//         background-size: cover;
+//         box-shadow: 4px 4px 100px rgba($black, 0.3);
+//     }
+//     #headertext{
+//         grid-column-start: 2;
+//         grid-column-end: 3; 
+//         width: 40vw;
+//         padding: 2vh 5vw;
+//         h1{
+//             text-transform: uppercase;
+//             color: $brand1;
+//             margin-top: 0;
+//         }
+//         h3{
+//             color:$gray2;
+//             font-weight: 500;
+//             // text-transform: uppercase;
+//             letter-spacing: 1px;
+//         }
+//         button{
+//             color: $white;
+//             background-color: $brand1;
+//             padding:30px 50px;
+//         }
+//     }
+    
+// }
+
+// #ourmission{
+//     background-color:rgba($gray3, 0.1);
+//     padding: 200px 4vw 250px 150px;
+//     h2{
+//         text-align: center;
+//         padding:30px;
+//     }
+//     h3{
+//         width:30%;
+//     }
+//     p{
+//         width:70%;
+//     }
+//     .row{
+//         margin-bottom:40px;
+//     }
+// }
+
+// #services{
+//     display:grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr;
+//     z-index: 20;
+//     margin-top:-100px;
+//     padding-top:150px;
+//     div{
+//         align-items: flex-start;
+//         margin:30px 0;
+//         padding-left:10vw;
+//         h2{
+//             margin-bottom: 0;
+//         }
+//         li{
+//             padding: 10px 0;
+//         }
+//     }
+//     img{
+//         position: relative;
+//         grid-column-start: 2;
+//         grid-column-end: 3;
+//         grid-row-start: 1;
+//         grid-column-end: 2;
+//         top:-250px;
+//         right: 4vw;
+//         width: 50vw;
+//     }
+
+// }
+
+// #solutions{
+//     display: grid;
+//     grid-template-columns: repeat(3, auto);
+//     grid-template-rows: repeat(4, auto);
+//     grid-template-areas: "title title title" "1 2 3" "4 5 6" "7 8 9";
+//     grid-column-gap: 20px;
+//     grid-row-gap: 20px;
+//     margin-right: 4vw;
+//     h2{
+//         grid-area: title;
+//         text-align: center;
+//         padding-bottom: 40px;
+//     }
+//     .solutionCard{
+//         padding:40px 60px;
+//         box-shadow: 4px 4px 100px rgba($black, 0.1);
+//         box-sizing: border-box;
+//         border-radius: 25px;
+//         p{
+//             text-align: left;
+//             line-height: 30px;
+//         }
+//     }
+
+// }
+
+
+// #ourteam{
+//     display: grid;
+//     grid-template-columns: repeat(2, auto);
+//     grid-template-rows: repeat(3, auto);
+//     width: 60vw;
+//     margin:auto;
+//     h2{
+//         grid-column-start: 1;
+//         grid-column-end: 3;
+//         text-align: center;
+//     }
+//     .teamitem{
+//         &:nth-child(even){
+            
+//             grid-row-start: 2;
+//             grid-row-end: 3;
+//             img{
+//                 grid-column-start: 1;
+//                 grid-column-end: 2;
+//             }
+//         }
+//         &:nth-child(odd){
+            
+//             grid-row-start: 3;
+//             grid-row-end: 4;
+//             img{
+//                 grid-column-start: 2;
+//                 grid-column-end: 3;
+//             }
+//         }
+//     }
+// }

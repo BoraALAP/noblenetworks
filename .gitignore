@@ -1,3 +1,4 @@
 *.skb
 node_modules/
 *.sketch
+export/

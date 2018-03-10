@@ -113,9 +113,10 @@ img{
 }
 
 section{
-    padding-left:150px;
+    padding-left:20vw;
     padding-top:100px;
     // width: calc(100vw - 150px);
+    padding-right: 20vw;
     
 }
 
@@ -134,18 +135,6 @@ button{
     outline: none;
 }
 
-.row{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-}
-.column{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
 
 
 
