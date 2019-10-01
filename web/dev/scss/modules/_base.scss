@@ -1,0 +1,244 @@
+*{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width: 100vw;
+    opacity: 1;
+    box-sizing: border-box; 
+    transition: 5.2s ease all;
+    overflow-x: hidden;
+    font:{
+        family:$font1;
+    } 
+    
+    &.notDisplay{
+        opacity: 0;
+        header{
+            opacity:0;
+            width: 0;
+            right:0;
+            #logo{
+                opacity:0;
+                
+            }
+        }
+        #line{
+            height:0vh;
+        }
+    }
+    &.fixPosition{
+        overflow: hidden;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+}
+
+h1{
+    font:{
+        family: $font1;
+        size: 1.6em;
+        weight:900;
+    }
+    color:$brand1;
+    letter-spacing: 3px;
+}
+
+h2{
+    font:{
+        family: $font1;
+        size: 1.4em;
+        weight:700;
+    }
+    color:$brand2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h3{ 
+    font:{
+        family: $font1;
+        size: 1em;
+        weight:700;
+    }
+    color:$brand1;
+}
+
+h4{
+    font:{
+        family: $font2;
+        size: 0.875em;
+        weight:500;
+    }
+    color:$brand1;
+}
+ 
+h5{
+    font:{
+        family: $font2;
+        size: 0.75em;
+        weight:700;
+    }
+    margin-bottom: 3vh;
+    color:$brand1;
+}
+
+h6{
+    font:{
+        family: $font2;
+        size: 0.6em;
+        weight:400;
+    }
+}
+
+p{ 
+    font:{
+        family: $font2;
+        size: 0.75em;
+        weight:400;
+    }
+    margin:0;
+    color: $gray1; 
+    line-height:2em;
+   
+}
+
+a, button{
+    text-decoration:none;
+    font:{
+        size:0.875em;
+    }
+}
+
+nav{
+    a{
+        font:{
+            family: $font1;
+            size: 1em;
+            weight:800;
+        }
+        text-decoration:none;
+        color: $brand1;
+    }
+}
+ul,li{
+    padding:0;
+}
+li{
+    margin-bottom: 5px;
+    list-style: none;
+    font:{
+        size:0.875em;
+    }
+}
+
+.fas{
+    color: $brand1;
+}
+
+img{
+    box-shadow: 4px 4px 100px rgba($black, 0.3); 
+}
+
+.section{
+    padding:100px 10vw 100px 20vw;
+}
+
+
+/*******************      Button       ********************/
+
+.btn{
+    border: 1px solid $black;
+    padding: 10px 0;
+    background: $black;
+}
+
+button{
+    border:none;
+    background:none;
+    outline: none;
+    color: #fff;
+    background-color: $brand1;
+    padding: 30px 50px;
+    transition: 1s all ease-in-out;
+    @include MQ($L){
+        &:hover{
+            box-shadow: 2px 4px 30px rgba($gray2,.5);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@include MQ($M){
+    h1{
+        font:{
+            size: 2em;
+        }
+    }
+    
+    h2{
+        font:{
+            size: 1.6em;
+        }
+        padding: 3vw 0 3vw;
+    }
+    
+    h3{ 
+        font:{
+            size: 1.4em;
+        }
+    }
+    
+    h4{
+        font:{
+            size: 1.2em;
+        }
+    }
+     
+    h5{
+        font:{
+            size: 1em;
+        }
+    }
+    
+    h6{
+        font:{
+            size: 0.7em;
+        }
+    }
+    
+    p{ 
+        font:{
+            size: 0.875em;
+        }
+        line-height:2em;
+       
+    }
+    a, button{
+        font:{
+            size:1em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
