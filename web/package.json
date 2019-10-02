@@ -4,7 +4,8 @@
   "description": "My website Project Template",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch"
   },
   "keywords": [
     "Bora",
@@ -19,15 +20,15 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.19.0",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^7.0.0",
     "gulp-clean-css": "latest",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.2",
     "gulp-refresh": "^1.1.0",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",

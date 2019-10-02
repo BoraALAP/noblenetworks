@@ -1,6 +1,6 @@
-const gulp = require('gulp');
+const { gulp, watch, src, dest } = require('gulp');
 const sass = require('gulp-sass');
-const watchSass = require("gulp-watch-sass");
+
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
@@ -8,7 +8,7 @@ const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const browserify = require('gulp-browserify');
 const babel = require("gulp-babel");
-const uglify = require('gulp-uglify');
+
 
 
 const src = 'dev/', dist = 'public/';
